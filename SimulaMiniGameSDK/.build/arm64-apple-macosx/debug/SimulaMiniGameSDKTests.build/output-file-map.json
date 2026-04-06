@@ -1,0 +1,19 @@
+{
+  "": {
+    "swift-dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/primary.swiftdeps"
+  },
+  "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Tests/SimulaMiniGameSDKTests/CatalogDecodingTests.swift": {
+    "dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/CatalogDecodingTests.d",
+    "object": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/CatalogDecodingTests.swift.o",
+    "swiftmodule": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/CatalogDecodingTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/CatalogDecodingTests.swiftdeps",
+    "diagnostics": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/CatalogDecodingTests.dia"
+  },
+  "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Tests/SimulaMiniGameSDKTests/ViewModelBehaviorTests.swift": {
+    "dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/ViewModelBehaviorTests.d",
+    "object": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/ViewModelBehaviorTests.swift.o",
+    "swiftmodule": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/ViewModelBehaviorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/ViewModelBehaviorTests.swiftdeps",
+    "diagnostics": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/ViewModelBehaviorTests.dia"
+  }
+}

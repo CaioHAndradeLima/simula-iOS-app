@@ -1,0 +1,752 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.xctest/Contents/MacOS/SimulaMiniGameSDKPackageTests",
+      "packagePath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK",
+      "productName" : "SimulaMiniGameSDKPackageTests"
+    }
+  ],
+  "copyCommands" : {
+    "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK_SimulaMiniGameSDK.bundle/Images.xcassets" : {
+      "inputs" : [
+        {
+          "kind" : "directory",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/Resources/Images.xcassets"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "directory",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK_SimulaMiniGameSDK.bundle/Images.xcassets"
+        }
+      ]
+    }
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.SimulaMiniGameSDK-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/sources",
+      "importPath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/APIClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/ProviderAndBusiness.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/SimulaMiniGameMenuSDKView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/UIPrimitives.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/ViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/DerivedSources/resource_bundle_accessor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<SimulaMiniGameSDK-arm64-apple-macosx-debug.module-resources>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SimulaMiniGameSDK",
+      "moduleOutputPath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules/SimulaMiniGameSDK.swiftmodule",
+      "objects" : [
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/APIClient.swift.o",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/Models.swift.o",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ProviderAndBusiness.swift.o",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/SimulaMiniGameMenuSDKView.swift.o",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/UIPrimitives.swift.o",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ViewModel.swift.o",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/resource_bundle_accessor.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE",
+        "-module-cache-path",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/include/SimulaMiniGameSDK-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "simulaminigamesdk"
+      ],
+      "outputFileMapPath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/APIClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ProviderAndBusiness.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/SimulaMiniGameMenuSDKView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/UIPrimitives.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules/SimulaMiniGameSDK.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/APIClient.swift",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/Models.swift",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/ProviderAndBusiness.swift",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/SimulaMiniGameMenuSDKView.swift",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/UIPrimitives.swift",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/ViewModel.swift",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/DerivedSources/resource_bundle_accessor.swift"
+      ],
+      "tempsPath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.SimulaMiniGameSDKPackageTests-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/sources",
+      "importPath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules/SimulaMiniGameSDKTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SimulaMiniGameSDKPackageTests",
+      "moduleOutputPath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules/SimulaMiniGameSDKPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/include/SimulaMiniGameSDKPackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "simulaminigamesdk"
+      ],
+      "outputFileMapPath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules/SimulaMiniGameSDKPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.SimulaMiniGameSDKTests-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/sources",
+      "importPath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Tests/SimulaMiniGameSDKTests/CatalogDecodingTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Tests/SimulaMiniGameSDKTests/ViewModelBehaviorTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules/SimulaMiniGameSDK.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SimulaMiniGameSDKTests",
+      "moduleOutputPath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules/SimulaMiniGameSDKTests.swiftmodule",
+      "objects" : [
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/CatalogDecodingTests.swift.o",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/ViewModelBehaviorTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "simulaminigamesdk"
+      ],
+      "outputFileMapPath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/CatalogDecodingTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/ViewModelBehaviorTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules/SimulaMiniGameSDKTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Tests/SimulaMiniGameSDKTests/CatalogDecodingTests.swift",
+        "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Tests/SimulaMiniGameSDKTests/ViewModelBehaviorTests.swift"
+      ],
+      "tempsPath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "SimulaMiniGameSDK" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "SimulaMiniGameSDK",
+      "-package-name",
+      "simulaminigamesdk",
+      "-c",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/APIClient.swift",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/Models.swift",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/ProviderAndBusiness.swift",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/SimulaMiniGameMenuSDKView.swift",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/UIPrimitives.swift",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/ViewModel.swift",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/DerivedSources/resource_bundle_accessor.swift",
+      "-I",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE",
+      "-module-cache-path",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/include/SimulaMiniGameSDK-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "simulaminigamesdk",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "SimulaMiniGameSDKPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "SimulaMiniGameSDKPackageTests",
+      "-package-name",
+      "simulaminigamesdk",
+      "-c",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/include/SimulaMiniGameSDKPackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "simulaminigamesdk",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "SimulaMiniGameSDKTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "SimulaMiniGameSDKTests",
+      "-package-name",
+      "simulaminigamesdk",
+      "-c",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Tests/SimulaMiniGameSDKTests/CatalogDecodingTests.swift",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Tests/SimulaMiniGameSDKTests/ViewModelBehaviorTests.swift",
+      "-I",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "simulaminigamesdk",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "SimulaMiniGameSDK" : [
+
+    ],
+    "SimulaMiniGameSDKPackageTests" : [
+      "SimulaMiniGameSDKTests",
+      "SimulaMiniGameSDK"
+    ],
+    "SimulaMiniGameSDKTests" : [
+      "SimulaMiniGameSDK"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/APIClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/ProviderAndBusiness.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/SimulaMiniGameMenuSDKView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/UIPrimitives.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/ViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/DerivedSources/resource_bundle_accessor.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/sources"
+    },
+    "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/sources"
+    },
+    "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/APIClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ProviderAndBusiness.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/SimulaMiniGameMenuSDKView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/UIPrimitives.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/CatalogDecodingTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/ViewModelBehaviorTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Tests/SimulaMiniGameSDKTests/CatalogDecodingTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Tests/SimulaMiniGameSDKTests/ViewModelBehaviorTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKTests.build/sources"
+    },
+    "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		93A110A52F94000100A10001 /* SimulaMiniGameSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 93A110A42F94000100A10001 /* SimulaMiniGameSDK */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B215FCB12F83EC7300C44D5D /* simula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A110A52F94000100A10001 /* SimulaMiniGameSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = simula;
 			packageProductDependencies = (
+				93A110A42F94000100A10001 /* SimulaMiniGameSDK */,
 			);
 			productName = simula;
 			productReference = B215FCB12F83EC7300C44D5D /* simula.app */;
@@ -98,11 +104,29 @@
 			productRefGroup = B215FCB22F83EC7300C44D5D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
+			packageReferences = (
+				93A110A32F94000100A10001 /* XCLocalSwiftPackageReference "../SimulaMiniGameSDK" */,
+			);
 			targets = (
 				B215FCB02F83EC7300C44D5D /* simula */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		93A110A32F94000100A10001 /* XCLocalSwiftPackageReference "../SimulaMiniGameSDK" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../SimulaMiniGameSDK;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93A110A42F94000100A10001 /* SimulaMiniGameSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93A110A32F94000100A10001 /* XCLocalSwiftPackageReference "../SimulaMiniGameSDK" */;
+			productName = SimulaMiniGameSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B215FCAF2F83EC7300C44D5D /* Resources */ = {

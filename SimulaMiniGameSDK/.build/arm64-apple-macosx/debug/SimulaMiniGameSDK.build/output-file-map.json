@@ -1,0 +1,54 @@
+{
+  "": {
+    "swift-dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/primary.swiftdeps"
+  },
+  "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/APIClient.swift": {
+    "dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/APIClient.d",
+    "object": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/APIClient.swift.o",
+    "swiftmodule": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/APIClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/APIClient.swiftdeps",
+    "diagnostics": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/APIClient.dia"
+  },
+  "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/Models.swift": {
+    "dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/Models.d",
+    "object": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/Models.swift.o",
+    "swiftmodule": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/Models~partial.swiftmodule",
+    "swift-dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/Models.swiftdeps",
+    "diagnostics": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/Models.dia"
+  },
+  "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/ProviderAndBusiness.swift": {
+    "dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ProviderAndBusiness.d",
+    "object": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ProviderAndBusiness.swift.o",
+    "swiftmodule": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ProviderAndBusiness~partial.swiftmodule",
+    "swift-dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ProviderAndBusiness.swiftdeps",
+    "diagnostics": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ProviderAndBusiness.dia"
+  },
+  "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/SimulaMiniGameMenuSDKView.swift": {
+    "dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/SimulaMiniGameMenuSDKView.d",
+    "object": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/SimulaMiniGameMenuSDKView.swift.o",
+    "swiftmodule": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/SimulaMiniGameMenuSDKView~partial.swiftmodule",
+    "swift-dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/SimulaMiniGameMenuSDKView.swiftdeps",
+    "diagnostics": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/SimulaMiniGameMenuSDKView.dia"
+  },
+  "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/UIPrimitives.swift": {
+    "dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/UIPrimitives.d",
+    "object": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/UIPrimitives.swift.o",
+    "swiftmodule": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/UIPrimitives~partial.swiftmodule",
+    "swift-dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/UIPrimitives.swiftdeps",
+    "diagnostics": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/UIPrimitives.dia"
+  },
+  "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/Sources/SimulaMiniGameSDK/ViewModel.swift": {
+    "dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ViewModel.d",
+    "object": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ViewModel.swift.o",
+    "swiftmodule": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ViewModel.swiftdeps",
+    "diagnostics": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/ViewModel.dia"
+  },
+  "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/DerivedSources/resource_bundle_accessor.swift": {
+    "dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/resource_bundle_accessor.d",
+    "object": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDK.build/resource_bundle_accessor.dia"
+  }
+}

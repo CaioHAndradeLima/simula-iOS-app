@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/primary.swiftdeps"
+  },
+  "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.derived/runner.swift": {
+    "dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/runner.d",
+    "object": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Users/caiohandradelima/Desktop/simula/SimulaMiniGameSDK/.build/arm64-apple-macosx/debug/SimulaMiniGameSDKPackageTests.build/runner.dia"
+  }
+}
