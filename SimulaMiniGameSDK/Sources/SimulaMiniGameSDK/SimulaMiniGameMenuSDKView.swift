@@ -26,7 +26,7 @@ public struct SimulaMiniGameMenuSDKView: View {
         GeometryReader { geo in
             ZStack {
                 if isMenuVisible {
-                    MenuChrome(onClose: {
+                    MenuChrome(character: character, onClose: {
                         isMenuVisible = false
                     }) {
                         VStack(spacing: DS.Spacing.small) {
@@ -34,6 +34,7 @@ public struct SimulaMiniGameMenuSDKView: View {
                             content(size: geo.size)
                         }
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
             .task { if vm.state == .idle { await vm.loadCatalog() } }

@@ -16,6 +16,12 @@ enum DS {
         static let accent = Color(red: 59 / 255, green: 130 / 255, blue: 246 / 255)
         static let modalBackgroundTop = Color(red: 0.20, green: 0.22, blue: 0.30).opacity(0.72)
         static let modalBackgroundBottom = Color(red: 0.12, green: 0.14, blue: 0.22).opacity(0.78)
+        /// Solid modal shell (no alpha) — same look as old gradient over black, without backdrop bleed-through.
+        static let modalCardFillTop = Color(red: 0.144, green: 0.158, blue: 0.216)
+        static let modalCardFillBottom = Color(red: 0.094, green: 0.109, blue: 0.172)
+        /// Opaque bottom “aura” (replaces translucent cyan radial).
+        static let modalCardAura = Color(red: 0.10, green: 0.165, blue: 0.235)
+        static let modalCardBorder = Color(red: 0.28, green: 0.30, blue: 0.36)
         static let scrim = Color.black.opacity(0.48)
     }
 
@@ -32,60 +38,112 @@ enum DS {
     }
 }
 
+/// Full-screen layer behind the modal card: Maya artwork + 50% black dim. Card stays a separate opaque layer on top.
+struct MenuBackdropView: View {
+    let character: MiniGameCharacterContext
+    var dimOverlayOpacity: Double = 0.5
+
+    @State private var remoteImageFailed = false
+
+    var body: some View {
+        ZStack {
+            backdropImage
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .clipped()
+
+            Color.black.opacity(dimOverlayOpacity)
+        }
+        .ignoresSafeArea()
+    }
+
+    @ViewBuilder
+    private var backdropImage: some View {
+        if let img = packageImage(named: "MayaBackground") {
+            img.resizable().scaledToFill()
+        } else if let img = packageImage(named: "MayaCharacter") {
+            img.resizable().scaledToFill()
+        } else if let url = URL(string: character.charImage), !remoteImageFailed {
+            AsyncImage(url: url) { phase in
+                switch phase {
+                case .success(let image):
+                    image.resizable().scaledToFill()
+                case .failure:
+                    DS.Colors.scrim.onAppear { remoteImageFailed = true }
+                case .empty:
+                    DS.Colors.scrim
+                @unknown default:
+                    DS.Colors.scrim
+                }
+            }
+        } else {
+            DS.Colors.scrim
+        }
+    }
+}
+
 struct MenuChrome<Content: View>: View {
+    let character: MiniGameCharacterContext
     let content: Content
     let onClose: (() -> Void)?
 
-    init(onClose: (() -> Void)? = nil, @ViewBuilder content: () -> Content) {
+    init(character: MiniGameCharacterContext, onClose: (() -> Void)? = nil, @ViewBuilder content: () -> Content) {
+        self.character = character
         self.onClose = onClose
         self.content = content()
     }
 
     var body: some View {
         GeometryReader { geo in
-            ZStack {
-                DS.Colors.scrim.ignoresSafeArea()
+            let cardWidth = geo.size.width < 768 ? geo.size.width * 0.92 : geo.size.width * 0.95
+            let cardHeight = geo.size.width < 768 ? geo.size.height * 0.82 : geo.size.height * 0.90
 
-                VStack(spacing: DS.Spacing.small) {
-                    if let onClose {
-                        HStack {
-                            Spacer()
-                            OverlayCloseControl(isEnabled: true, action: onClose)
+            ZStack(alignment: .center) {
+                MenuBackdropView(character: character, dimOverlayOpacity: 0.5)
+                    .frame(width: geo.size.width, height: geo.size.height)
+
+                HStack(spacing: 0) {
+                    Spacer(minLength: 0)
+                    VStack(spacing: DS.Spacing.small) {
+                        if let onClose {
+                            HStack {
+                                Spacer()
+                                OverlayCloseControl(isEnabled: true, action: onClose)
+                            }
+                            .padding(.top, 2)
                         }
-                        .padding(.top, 2)
+                        content
                     }
-                    content
+                    .padding(.horizontal, DS.Spacing.medium)
+                    .padding(.vertical, DS.Spacing.medium)
+                    .frame(width: cardWidth, height: cardHeight)
+                    .background(
+                        ZStack {
+                            LinearGradient(
+                                colors: [DS.Colors.modalCardFillTop, DS.Colors.modalCardFillBottom],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                            RadialGradient(
+                                colors: [DS.Colors.modalCardAura, DS.Colors.modalCardFillBottom],
+                                center: .bottom,
+                                startRadius: 40,
+                                endRadius: 380
+                            )
+                        }
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: DS.CornerRadius.modal)
+                            .stroke(DS.Colors.modalCardBorder, lineWidth: 1)
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: DS.CornerRadius.modal))
+                    .shadow(color: .black.opacity(0.4), radius: 24, x: 0, y: 16)
+                    Spacer(minLength: 0)
                 }
-                .padding(.horizontal, DS.Spacing.medium)
-                .padding(.vertical, DS.Spacing.medium)
-                .frame(
-                    width: geo.size.width < 768 ? geo.size.width * 0.92 : geo.size.width * 0.95,
-                    height: geo.size.width < 768 ? geo.size.height * 0.82 : geo.size.height * 0.90
-                )
-                .background(
-                    ZStack {
-                        // Subtle aura like the web modal background.
-                        LinearGradient(
-                            colors: [DS.Colors.modalBackgroundTop, DS.Colors.modalBackgroundBottom],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                        RadialGradient(
-                            colors: [Color.cyan.opacity(0.10), .clear],
-                            center: .bottom,
-                            startRadius: 60,
-                            endRadius: 360
-                        )
-                    }
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: DS.CornerRadius.modal)
-                        .stroke(Color.white.opacity(0.08), lineWidth: 1)
-                )
-                .clipShape(RoundedRectangle(cornerRadius: DS.CornerRadius.modal))
-                .shadow(color: .black.opacity(0.4), radius: 24, x: 0, y: 16)
+                .frame(width: geo.size.width, height: geo.size.height)
             }
+            .frame(width: geo.size.width, height: geo.size.height)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
