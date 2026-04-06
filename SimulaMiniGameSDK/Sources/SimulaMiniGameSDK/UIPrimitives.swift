@@ -1,5 +1,8 @@
 import SwiftUI
 import WebKit
+#if canImport(UIKit)
+import UIKit
+#endif
 
 #if os(iOS)
 enum DS {
@@ -91,17 +94,44 @@ struct MenuHeaderView: View {
     let character: MiniGameCharacterContext
     @State private var imageFailed = false
 
-    var body: some View {
-        HStack(alignment: .center, spacing: 12) {
-            // Avatar + controller: glow sits behind; icon reads as neon on soft pink halo (web parity).
-            ZStack(alignment: .leading) {
-                controllerBadge
-                    .zIndex(0)
+    /// Width reference = 30% of screen; Maya / icon / disk percentages use this as `base`.
+    private var clusterBaseWidth: CGFloat {
+        UIScreen.main.bounds.width * 0.3
+    }
 
-                avatar
-                    .zIndex(1)
+    var body: some View {
+        let base = clusterBaseWidth
+        let clusterH = base
+        let mayaSide = base * 0.8
+        let iconSize = base * 0.4
+        let diskDiameter = base
+        let mayaY = (clusterH - mayaSide) / 2
+        let mayaTrailing = mayaSide
+        let iconCenterX = mayaTrailing
+        let iconCenterY = mayaY + mayaSide / 2
+        let layoutWidth = mayaTrailing + diskDiameter / 2
+
+        HStack(alignment: .center, spacing: 12) {
+            ZStack(alignment: .topLeading) {
+                headerClusterBackgroundDisk(
+                    diameter: diskDiameter,
+                    centerX: iconCenterX,
+                    centerY: iconCenterY
+                )
+                .zIndex(0)
+
+                headerClusterGamestickIcon(
+                    iconSize: iconSize,
+                    centerX: iconCenterX,
+                    centerY: iconCenterY
+                )
+                .zIndex(1)
+
+                avatar(side: mayaSide, cornerRadius: mayaSide * (16 / 74))
+                    .offset(x: 0, y: mayaY)
+                    .zIndex(2)
             }
-            .frame(width: 138, height: 90, alignment: .leading)
+            .frame(width: layoutWidth, height: clusterH, alignment: .leading)
 
             VStack(alignment: .leading, spacing: 4) {
                 Text("Play a Game with")
@@ -115,73 +145,60 @@ struct MenuHeaderView: View {
         }
     }
 
-    /// Soft circular pink/magenta bloom + disk (not a purple pill); centered behind the avatar’s trailing edge so it bridges into the title area.
-    private var controllerBadge: some View {
-        let pinkCore = Color(red: 0.98, green: 0.32, blue: 0.62)
-        let magentaEdge = Color(red: 0.72, green: 0.22, blue: 0.92)
+    private func headerClusterBackgroundDisk(diameter: CGFloat, centerX: CGFloat, centerY: CGFloat) -> some View {
+        let diskTint = Color(red: 0.82, green: 0.28, blue: 0.78)
+        let r = diameter / 2
 
-        return ZStack {
-            // Wide outer halo (reference: diffuse glow behind neon outline icon).
-            Circle()
-                .fill(
-                    RadialGradient(
-                        colors: [
-                            pinkCore.opacity(0.28),
-                            magentaEdge.opacity(0.12),
-                            Color.clear
-                        ],
-                        center: .center,
-                        startRadius: 4,
-                        endRadius: 52
-                    )
+        return Circle()
+            .fill(
+                RadialGradient(
+                    gradient: Gradient(stops: [
+                        .init(color: diskTint.opacity(0.15), location: 0),
+                        .init(color: diskTint.opacity(0.15), location: 0.62),
+                        .init(color: diskTint.opacity(0.05), location: 0.86),
+                        .init(color: Color.clear, location: 1)
+                    ]),
+                    center: .center,
+                    startRadius: 0,
+                    endRadius: r
                 )
-                .frame(width: 118, height: 118)
-                .blur(radius: 14)
-
-            // Inner readable disk (slightly opaque pink, still behind avatar).
-            Circle()
-                .fill(
-                    RadialGradient(
-                        colors: [
-                            pinkCore.opacity(0.16),
-                            magentaEdge.opacity(0.08),
-                            Color.clear
-                        ],
-                        center: .center,
-                        startRadius: 2,
-                        endRadius: 34
-                    )
-                )
-                .frame(width: 78, height: 78)
-
-            if let icon = packageImage(named: "GameControlIcon") {
-                icon
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: 42, height: 42)
-                    .shadow(color: pinkCore.opacity(0.38), radius: 5, x: 0, y: 0)
-            }
-        }
-        .frame(width: 118, height: 118)
-        // Shift so cluster sits behind the right side of the 74×74 avatar; center ~62pt from leading ≈ overlap + bridge to text.
-        .offset(x: 22, y: -7)
+            )
+            .frame(width: diameter, height: diameter)
+            .offset(x: centerX - diameter / 2, y: centerY - diameter / 2)
     }
 
     @ViewBuilder
-    private var avatar: some View {
+    private func headerClusterGamestickIcon(iconSize: CGFloat, centerX: CGFloat, centerY: CGFloat) -> some View {
+        let pinkCore = Color(red: 0.98, green: 0.32, blue: 0.62)
+
+        if let icon = packageImage(named: "GameControlIcon") {
+            icon
+                .resizable()
+                .renderingMode(.original)
+                .scaledToFit()
+                .frame(width: iconSize, height: iconSize)
+                .shadow(color: pinkCore.opacity(0.38), radius: 5, x: 0, y: 0)
+                .offset(x: centerX - iconSize / 2, y: centerY - iconSize / 2)
+        }
+    }
+
+    @ViewBuilder
+    private func avatar(side: CGFloat, cornerRadius: CGFloat) -> some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
                 .fill(Color.white.opacity(0.09))
-                .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.white.opacity(0.12), lineWidth: 1))
-                .frame(width: 74, height: 74)
+                .overlay(
+                    RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                        .stroke(Color.white.opacity(0.12), lineWidth: 1)
+                )
+                .frame(width: side, height: side)
 
             if let bundledMaya = packageImage(named: "MayaCharacter"), !imageFailed {
                 bundledMaya
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 74, height: 74)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .frame(width: side, height: side)
+                    .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
             } else {
                 if let url = URL(string: character.charImage), !imageFailed {
                     AsyncImage(url: url) { phase in
@@ -189,31 +206,31 @@ struct MenuHeaderView: View {
                         case .success(let image):
                             image.resizable().scaledToFill()
                         case .failure:
-                            initials
+                            initials(side: side)
                                 .onAppear { imageFailed = true }
                         case .empty:
                             ProgressView().tint(.white)
                         @unknown default:
-                            initials
+                            initials(side: side)
                         }
                     }
-                    .frame(width: 74, height: 74)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .frame(width: side, height: side)
+                    .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
                 } else {
-                    initials
+                    initials(side: side)
                 }
             }
         }
         .shadow(color: .black.opacity(0.35), radius: 10, x: 0, y: 6)
     }
 
-    private var initials: some View {
+    private func initials(side: CGFloat) -> some View {
         let parts = character.charName.split(separator: " ")
         let text = String(parts.prefix(2).map { $0.first.map(String.init) ?? "" }.joined())
         return Text(text.isEmpty ? "AI" : text.uppercased())
-            .font(.system(size: 24, weight: .semibold))
+            .font(.system(size: max(14, side * 0.32), weight: .semibold))
             .foregroundStyle(.white)
-            .frame(width: 74, height: 74)
+            .frame(width: side, height: side)
     }
 }
 
