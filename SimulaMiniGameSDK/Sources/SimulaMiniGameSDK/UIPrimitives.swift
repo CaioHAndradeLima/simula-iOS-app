@@ -92,34 +92,80 @@ struct MenuHeaderView: View {
     @State private var imageFailed = false
 
     var body: some View {
-        HStack(alignment: .center, spacing: 14) {
-            ZStack(alignment: .topTrailing) {
-                avatar
+        HStack(alignment: .center, spacing: 12) {
+            // Avatar + controller: glow sits behind; icon reads as neon on soft pink halo (web parity).
+            ZStack(alignment: .leading) {
+                controllerBadge
+                    .zIndex(0)
 
-                Group {
-                    if let icon = packageImage(named: "GameControlIcon") {
-                        icon
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                            .shadow(color: .purple.opacity(0.45), radius: 8, x: 0, y: 2)
-                    } else {
-                        EmptyView()
-                    }
-                }
-                .offset(x: 12, y: 10)
+                avatar
+                    .zIndex(1)
             }
+            .frame(width: 138, height: 90, alignment: .leading)
 
             VStack(alignment: .leading, spacing: 4) {
                 Text("Play a Game with")
                     .font(.system(size: 20, weight: .black))
                     .foregroundStyle(DS.Colors.primaryText)
                 Text(character.charName)
-                    .font(.system(size: 18, weight: .bold))
+                    .font(.system(size: 18, weight: .regular))
                     .foregroundStyle(DS.Colors.secondaryText)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
+    }
+
+    /// Soft circular pink/magenta bloom + disk (not a purple pill); centered behind the avatar’s trailing edge so it bridges into the title area.
+    private var controllerBadge: some View {
+        let pinkCore = Color(red: 0.98, green: 0.32, blue: 0.62)
+        let magentaEdge = Color(red: 0.72, green: 0.22, blue: 0.92)
+
+        return ZStack {
+            // Wide outer halo (reference: diffuse glow behind neon outline icon).
+            Circle()
+                .fill(
+                    RadialGradient(
+                        colors: [
+                            pinkCore.opacity(0.28),
+                            magentaEdge.opacity(0.12),
+                            Color.clear
+                        ],
+                        center: .center,
+                        startRadius: 4,
+                        endRadius: 52
+                    )
+                )
+                .frame(width: 118, height: 118)
+                .blur(radius: 14)
+
+            // Inner readable disk (slightly opaque pink, still behind avatar).
+            Circle()
+                .fill(
+                    RadialGradient(
+                        colors: [
+                            pinkCore.opacity(0.16),
+                            magentaEdge.opacity(0.08),
+                            Color.clear
+                        ],
+                        center: .center,
+                        startRadius: 2,
+                        endRadius: 34
+                    )
+                )
+                .frame(width: 78, height: 78)
+
+            if let icon = packageImage(named: "GameControlIcon") {
+                icon
+                    .resizable()
+                    .renderingMode(.original)
+                    .scaledToFit()
+                    .frame(width: 42, height: 42)
+                    .shadow(color: pinkCore.opacity(0.38), radius: 5, x: 0, y: 0)
+            }
+        }
+        .frame(width: 118, height: 118)
+        // Shift so cluster sits behind the right side of the 74×74 avatar; center ~62pt from leading ≈ overlap + bridge to text.
+        .offset(x: 22, y: -7)
     }
 
     @ViewBuilder
@@ -229,10 +275,13 @@ struct OverlayCloseControl: View {
     var body: some View {
         Button(action: action) {
             Image(systemName: "xmark")
-                .foregroundStyle(.white)
-                .font(.system(size: 13, weight: .bold))
+                .foregroundStyle(Color.white.opacity(0.82))
+                .font(.system(size: 13, weight: .semibold))
                 .frame(width: 32, height: 32)
-                .background(Color.black.opacity(0.62))
+                .background(Color.black.opacity(0.44))
+                .overlay(
+                    Circle().stroke(Color.white.opacity(0.24), lineWidth: 1)
+                )
                 .clipShape(Circle())
         }
         .disabled(!isEnabled)
