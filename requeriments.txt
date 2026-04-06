@@ -1,0 +1,96 @@
+
+## 🎯 Overview
+
+Thank you for taking the time to complete this technical assessment. This exercise is designed to give us a window into how you architect native mobile SDKs, think through industry standards like OMID, and ship production-grade code — all core skills for the work we do at Simula.
+
+We build opt-in sponsored mini-games and AI-native ad formats that live inside AI companion platforms. You can see our React SDK deployed live at [coolaigames.com/maya](https://coolaigames.com/maya) — select an AI companion and click **Play A Game** to see our mini-game ad units in action. Your task is to port key parts of this SDK to native Swift, then go deeper into OMID and React Native bridging.
+
+https://simula-ad.notion.site/image/attachment%3A3d9b6059-b96f-43d2-b821-ab4b26337269%3Aimage.png?table=block&id=333af70f-6f0d-8019-9e0a-c3636a0df6e1&spaceId=22caf70f-6f0d-819e-b821-0003f16a38ef&width=1420&userId=&cache=v2
+
+
+💡 Before starting, spend 10–15 minutes exploring [coolaigames.com/maya](https://coolaigames.com/maya) and browse the [React SDK on GitHub](https://github.com/Simula-AI-SDK/simula-ad-sdk). Understanding our existing implementation firsthand will lead to a much stronger native build.
+
+## About the Role
+
+This role is high-ownership and fast-paced. You will architect and ship native iOS and Android SDKs, own OMID integration through to third-party vendor certification, and build React Native bridging layers — all with heavy AI-assisted development expected. You'll work directly with the CEO and CTO, with significant technical autonomy and a direct line to production.
+
+
+## ✅ The Tasks
+
+### Task 1 — Swift SDK: MiniGameMenu & MiniGameProvider
+
+Due: 3 hours from when you begin (please record your session)
+
+Reference the open-source React SDK at [github.com/Simula-AI-SDK/simula-ad-sdk](https://github.com/Simula-AI-SDK/simula-ad-sdk) to understand the existing architecture, data models, and behavior. Your task is to recode the `MiniGameMenu` and `MiniGameProvider` as a native Swift implementation.
+
+**What to build**
+
+- A native Swift framework containing `MiniGameMenuView` and `MiniGameProvider`
+- **Tablet layout (iPad):** 4-column grid — must match the React SDK layout exactly, no visual glitches or misaligned cells
+
+Image layout:
+
+https://simula-ad.notion.site/image/attachment%3A2a103f71-e985-48be-8372-0f46dd719e26%3Aimage.png?table=block&id=333af70f-6f0d-80dc-955a-ce625b3b8c41&spaceId=22caf70f-6f0d-819e-b821-0003f16a38ef&width=1420&userId=&cache=v2
+
+
+Mobile layout (iPhone): Horizontal swipe carousel — smooth paging, one card peek visible, matches the React SDK behavior
+
+Image layout:
+
+https://simula-ad.notion.site/image/attachment%3A1d8b3bdc-c2cd-4737-b617-1a8ec13424d9%3Aimage.png?table=block&id=333af70f-6f0d-804b-bb68-eb11cc0516a7&spaceId=22caf70f-6f0d-819e-b821-0003f16a38ef&width=480&userId=&cache=v2
+
+Requeriments:
+
+- **UI fidelity:** Card appearance, typography, iconography, and state presentation (loading, empty, error) must match the deployed reference at [coolaigames.com/maya](https://coolaigames.com/maya)
+- `MiniGameProvider` data layer including game list fetch, loading state, and error handling, mirroring the React SDK's provider contract
+
+**Technical requirements**
+
+- Pure SwiftUI — no UIKit fallbacks for the core layout
+- Trait-collection responsive: automatically switches between carousel and grid based on `horizontalSizeClass`
+- Carousel must use `TabView` with `.tabViewStyle(.page)` or a custom `ScrollView` with snapping — no third-party layout libraries
+- Grid must use `LazyVGrid` with a fixed 4-column layout on `regular` horizontal size class
+- Provider must use `async/await` — no completion handlers or Combine unless specifically bridging
+- Minimum deployment target: iOS 16
+- Include a sample `ContentView` demonstrating integration
+
+**Technical requirements**
+
+- API key: `pub_eeee14c661ce47659a289db29364723a`
+
+> ⏱ You have **3 hours**. We strongly encourage AI coding tools (Cursor, Claude, Copilot — whatever you prefer). The recording matters as much as the output. We want to see how you work, prompt, and debug.
+> 
+
+**Deliver**
+
+1. Screen recording of your full 3-hour build session
+2. Screen recording of the final mini-game menu
+3. Open sourced Github link to the Swift SDK
+
+
+- **What tech stack should I use?**
+    
+    SwiftUI for the view layer, `async/await` for networking. No third-party layout libraries. Lightweight dependencies for non-layout concerns (e.g. Kingfisher for image loading) are fine.
+    
+- **How strictly does the UI need to match?**
+    
+    Very strictly. Load [coolaigames.com/maya](https://coolaigames.com/maya) on both a phone and a tablet (or simulator), screenshot what you see, and use it as your design spec. Card layout, spacing, typography, and interaction behavior should be indistinguishable.
+    
+- **Can I use AI tools to help build?**
+    
+    Absolutely — in fact, we strongly encourage it. The entire point of the recording is to observe how you leverage AI in your workflow. Use whatever you like: Cursor, Claude, ChatGPT, Copilot, etc.
+    
+- **What should I record?**
+    
+    Record your screen for the full 3-hour build session. Audio narration is a plus but not required. We want to see your process: how you prompt AI, how you approach the layout challenges, and how you debug when things don't look right.
+    
+- **Who do I submit to?**
+    
+    Let Yizhen know when the assignment has been submitted
+    
+- **What are you evaluating?**
+    - **UI fidelity** — Does the Swift output look and behave like the React reference? Grid, carousel, cards, states.
+    - **Swift architecture** — Is the code idiomatic SwiftUI? Clean separation of view and data layers.
+    - **Responsiveness** — Flawless adaptive layout: 4-column grid on iPad, smooth carousel on iPhone, zero glitches.
+    - **AI fluency** — How effectively do you use AI tools to accelerate development and debug?
+    - **Code quality** — Readability, naming conventions, error handling, and sample app integration.
