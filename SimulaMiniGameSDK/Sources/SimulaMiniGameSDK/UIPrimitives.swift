@@ -51,7 +51,6 @@ struct MenuChrome<Content: View>: View {
                         HStack {
                             Spacer()
                             OverlayCloseControl(isEnabled: true, action: onClose)
-                                .frame(width: 28, height: 28)
                         }
                         .padding(.top, 2)
                     }
@@ -94,21 +93,21 @@ struct MenuHeaderView: View {
     let character: MiniGameCharacterContext
     @State private var imageFailed = false
 
-    /// Width reference = 30% of screen; Maya / icon / disk percentages use this as `base`.
+    /// Width reference = 25% of screen; Maya / icon / disk percentages use this as `base`.
     private var clusterBaseWidth: CGFloat {
-        UIScreen.main.bounds.width * 0.3
+        UIScreen.main.bounds.width * 0.25
     }
 
     var body: some View {
         let base = clusterBaseWidth
         let clusterH = base
         let mayaSide = base * 0.8
-        let iconSize = base * 0.4
+        let iconSize = base * 0.6
         let diskDiameter = base
         let mayaY = (clusterH - mayaSide) / 2
         let mayaTrailing = mayaSide
         let iconCenterX = mayaTrailing
-        let iconCenterY = mayaY + mayaSide / 2
+        let stickCenterY = mayaY + mayaSide / 2 - base * 0.06
         let layoutWidth = mayaTrailing + diskDiameter / 2
 
         HStack(alignment: .center, spacing: 12) {
@@ -116,14 +115,14 @@ struct MenuHeaderView: View {
                 headerClusterBackgroundDisk(
                     diameter: diskDiameter,
                     centerX: iconCenterX,
-                    centerY: iconCenterY
+                    centerY: stickCenterY
                 )
                 .zIndex(0)
 
                 headerClusterGamestickIcon(
                     iconSize: iconSize,
                     centerX: iconCenterX,
-                    centerY: iconCenterY
+                    centerY: stickCenterY
                 )
                 .zIndex(1)
 
@@ -289,20 +288,24 @@ struct OverlayCloseControl: View {
     let isEnabled: Bool
     let action: () -> Void
 
+    private let diameter: CGFloat = 32
+
     var body: some View {
         Button(action: action) {
-            Image(systemName: "xmark")
-                .foregroundStyle(Color.white.opacity(0.82))
-                .font(.system(size: 13, weight: .semibold))
-                .frame(width: 32, height: 32)
-                .background(Color.black.opacity(0.44))
-                .overlay(
-                    Circle().stroke(Color.white.opacity(0.24), lineWidth: 1)
-                )
-                .clipShape(Circle())
+            ZStack {
+                Circle()
+                    .fill(Color(white: 0.22).opacity(0.95))
+                Circle()
+                    .stroke(Color.white.opacity(0.52), lineWidth: 1.5)
+                Image(systemName: "xmark")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(Color(red: 0.94, green: 0.94, blue: 0.96))
+            }
+            .frame(width: diameter, height: diameter)
         }
+        .buttonStyle(.plain)
         .disabled(!isEnabled)
-        .opacity(isEnabled ? 1 : 0.6)
+        .opacity(isEnabled ? 1 : 0.55)
     }
 }
 
