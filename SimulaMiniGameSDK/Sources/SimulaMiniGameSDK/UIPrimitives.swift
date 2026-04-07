@@ -534,17 +534,13 @@ struct InteractiveMiniGameCarousel: View {
                     }
                     .padding(.horizontal, horizontalInset)
                     .padding(.vertical, 14)
+                    .applyCarouselTargetLayout()
                 }
                 .coordinateSpace(name: "SimulaCarouselSpace")
                 .onPreferenceChange(CarouselCardCenterKey.self) { value in
                     cardCenters = value
                 }
-                .simultaneousGesture(
-                    DragGesture(minimumDistance: 4)
-                        .onEnded { _ in
-                            snapToNearest(reader: reader, containerCenterX: containerCenterX)
-                        }
-                )
+                .applyNaturalCarouselPaging()
                 .onAppear {
                     guard let first = games.first else { return }
                     DispatchQueue.main.async {
@@ -552,18 +548,6 @@ struct InteractiveMiniGameCarousel: View {
                     }
                 }
             }
-        }
-    }
-
-    private func snapToNearest(reader: ScrollViewProxy, containerCenterX: CGFloat) {
-        guard let nearest = cardCenters.min(by: {
-            abs($0.value - containerCenterX) < abs($1.value - containerCenterX)
-        }) else {
-            return
-        }
-
-        withAnimation(.spring(response: 0.30, dampingFraction: 0.88)) {
-            reader.scrollTo(nearest.key, anchor: .center)
         }
     }
 
@@ -581,6 +565,27 @@ struct InteractiveMiniGameCarousel: View {
         let normalized = min(1.0, distance / (cardWidth * 0.95))
         // Center card is slightly raised; side cards sit lower.
         return -8 + (12 * normalized)
+    }
+}
+
+private extension View {
+    @ViewBuilder
+    func applyCarouselTargetLayout() -> some View {
+        if #available(iOS 17.0, *) {
+            self.scrollTargetLayout()
+        } else {
+            self
+        }
+    }
+
+    @ViewBuilder
+    func applyNaturalCarouselPaging() -> some View {
+        if #available(iOS 18.0, *) {
+            self
+                .scrollTargetBehavior(.viewAligned(limitBehavior: .alwaysByFew))
+        } else {
+            self
+        }
     }
 }
 
