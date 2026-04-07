@@ -52,6 +52,13 @@ struct MenuBackdropView: View {
                 .clipped()
 
             Color.black.opacity(dimOverlayOpacity)
+
+            // Extra bottom falloff like the web reference: transparent at top, solid black at bottom.
+            LinearGradient(
+                colors: [Color.black.opacity(0), Color.black.opacity(0.9)],
+                startPoint: .top,
+                endPoint: .bottom
+            )
         }
         .ignoresSafeArea()
     }
